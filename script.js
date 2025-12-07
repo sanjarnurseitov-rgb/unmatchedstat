@@ -31,10 +31,12 @@ function populateSelects(){
   const filterMap = $('filterMap');
   const filterHero = $('filterHero');
   heroSel.innerHTML=''; mapSel.innerHTML=''; filterMap.innerHTML='<option value=\"\">Все карты</option>'; filterHero.innerHTML='<option value=\"\">Все герои</option>';
-  heroes.forEach(h=>{
-    heroSel.insertAdjacentHTML('beforeend', `<option value="${h.name}">${h.name}</option>`);
-    filterHero.insertAdjacentHTML('beforeend', `<option value="${h.name}">${h.name}</option>`);
-  });
+ heroes.forEach(h=>{
+    // показываем русское имя, сохраняем английское
+    heroSel.insertAdjacentHTML('beforeend', `<option value="${h.name_en}">${h.name_ru}</option>`);
+    filterHero.insertAdjacentHTML('beforeend', `<option value="${h.name_en}">${h.name_ru}</option>`);
+});
+
   maps.forEach(m=>{
     mapSel.insertAdjacentHTML('beforeend', `<option value="${m}">${m}</option>`);
     filterMap.insertAdjacentHTML('beforeend', `<option value="${m}">${m}</option>`);
