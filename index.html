@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
   <header class="site-header">
     <div class="wrap">
@@ -16,6 +17,8 @@
   </header>
 
   <main class="wrap main-grid">
+
+    <!-- ░░░ БЛОК: Добавить результат матча ░░░ -->
     <section class="panel">
       <h2>Добавить результат матча</h2>
 
@@ -43,12 +46,16 @@
       <button id="addMatchBtn" class="btn">Добавить матч</button>
 
       <div class="small">
-        <input type="checkbox" id="saveLocal" checked /> <label for="saveLocal">Сохранять локально (localStorage)</label>
+        <input type="checkbox" id="saveLocal" checked />
+        <label for="saveLocal">Сохранять локально (localStorage)</label>
       </div>
     </section>
 
+
+    <!-- ░░░ БЛОК: Игроки / Профили ░░░ -->
     <section class="panel">
       <h2>Игроки / Профили</h2>
+
       <label>Добавить игрока</label>
       <input id="newPlayerName" placeholder="Имя игрока (ник)" />
       <button id="addPlayerBtn" class="btn ghost">Добавить игрока</button>
@@ -56,20 +63,31 @@
       <div id="playersList" class="players-list"></div>
     </section>
 
+
+    <!-- ░░░ БЛОК: Статистика героев ░░░ -->
     <section class="panel full">
       <h2>Статистика героев</h2>
+
+      <label>Фильтр по герою</label>
+      <select id="filterHero"></select>
+
+      <label>Фильтр по карте</label>
+      <select id="filterMap"></select>
+
       <canvas id="heroChart"></canvas>
     </section>
 
+    <!-- ░░░ БЛОК: Статистика игроков ░░░ -->
     <section class="panel full">
       <h2>Статистика игроков</h2>
       <canvas id="playerChart"></canvas>
     </section>
+
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <small>Сайт сгенерирован автоматически — можно загрузить на GitHub Pages. Поддержка профилей и баз данных.</small>
+      <small>Сайт сгенерирован автоматически — можно загружать на GitHub Pages.</small>
     </div>
   </footer>
 
